@@ -1,0 +1,58 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    margin: 5%;
+    background-color: indianred;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+.repairFlux {
+    clear: both;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 70px;
+    color: darkblue;
+    text-decoration: underline;
+}
+h1 a {
+    color: darkblue;
+}
+h1 a:hover {
+    color: darkblue;
+}
+a {
+    color: yellow;
+    text-decoration: none;
+    font-style: italic;
+}
+a:hover {
+    color: green;
+}
+ul {
+    list-style-type: none;
+}
+.form label {
+    display: block;
+    width: 100px;
+    float: left;
+}
+.photo-gallery li {
+    display: inline-block;
+}

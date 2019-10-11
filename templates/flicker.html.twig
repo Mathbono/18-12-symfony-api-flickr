@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Recherche de photos sur Flicker</h2>
+    <form class="form" method="post" action="{{ path('handle_flicker_form') }}">
+        <fieldset>
+            <legend>Recherche de...</legend>
+            <ul>
+                <li>
+                    <label for="search">Photo :</label>
+                    <input type="text" id="search" name="search">
+                </li>
+                <li>
+                    <input type="submit" value="Envoyer">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    {% if photos is defined %}
+        <ul class="photo-gallery">
+            {% for photo in photos %}
+                <li>
+                    <a data-fancybox="gallery" href="{{ photo.getLargeUrl }}">
+                        <img src="{{ photo.getThumbmailUrl }}" title="{{ photo.getTitle }}" alt="{{ photo.getTitle }}">
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

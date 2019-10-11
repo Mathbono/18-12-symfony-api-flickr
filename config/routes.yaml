@@ -1,0 +1,36 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\HomeController::hello
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
+hello_world:
+    path: /hello
+    controller: App\Controller\HelloController::helloWorld
+hello_prenom:
+    path: /hello/{prenom}/{age}
+    controller: App\Controller\HelloController::helloPrenom
+    requirements:
+            age: \d+
+show_customer_form:
+    path: /customer
+    controller: App\Controller\CustomerController::showForm
+    methods: [GET]
+handle_customer_form:
+    path: /customer
+    controller: App\Controller\CustomerController::handleForm
+    methods: [POST]
+show_flicker_form:
+    path: /flicker
+    controller: App\Controller\FlickerController::showFlicker
+    methods: [GET]
+handle_flicker_form:
+    path: /flicker
+    controller: App\Controller\FlickerController::handleFlicker
+    methods: [POST]
+#products:
+#    path: /products
+#    controller: App\Controller\ProductsController::list

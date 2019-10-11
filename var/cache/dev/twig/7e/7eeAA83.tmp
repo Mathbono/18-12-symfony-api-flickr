@@ -1,0 +1,148 @@
+<?php
+
+/* customer.html.twig */
+class __TwigTemplate_95b2ebace71fd2781a3e4295263d5c173ce0f97e7c0c84813d72d0d6636ad04c extends Twig_Template
+{
+    private $source;
+
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        // line 1
+        $this->parent = $this->loadTemplate("base.html.twig", "customer.html.twig", 1);
+        $this->blocks = array(
+            'body' => array($this, 'block_body'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "customer.html.twig"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "customer.html.twig"));
+
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 3
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        // line 4
+        echo "    <h2>Recherche de clients en base de données</h2>
+    <form id=\"customer\" method=\"post\" action=\"";
+        // line 5
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("handle_customer_form");
+        echo "\">
+        <fieldset>
+            <legend>Recherche par...</legend>
+            <ul>
+                <li>
+                    <label for=\"firstname\">Prénom :</label>
+                    <input type=\"text\" id=\"firstname\" name=\"firstname\">
+                </li>
+                <li>
+                    <label for=\"lastname\">Nom :</label>
+                    <input type=\"text\" id=\"lastname\" name=\"lastname\">
+                </li>
+                <li>
+                    <label for=\"society\">Société :</label>
+                    <input type=\"text\" id=\"society\" name=\"society\">
+                </li>
+                <li>
+                    <label for=\"country\">Pays :</label>
+                    <input type=\"text\" id=\"country\" name=\"country\">
+                </li>
+                <li>
+                    <input type=\"submit\">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "customer.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  56 => 5,  53 => 4,  44 => 3,  15 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Twig_Source("{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Recherche de clients en base de données</h2>
+    <form id=\"customer\" method=\"post\" action=\"{{ path('handle_customer_form') }}\">
+        <fieldset>
+            <legend>Recherche par...</legend>
+            <ul>
+                <li>
+                    <label for=\"firstname\">Prénom :</label>
+                    <input type=\"text\" id=\"firstname\" name=\"firstname\">
+                </li>
+                <li>
+                    <label for=\"lastname\">Nom :</label>
+                    <input type=\"text\" id=\"lastname\" name=\"lastname\">
+                </li>
+                <li>
+                    <label for=\"society\">Société :</label>
+                    <input type=\"text\" id=\"society\" name=\"society\">
+                </li>
+                <li>
+                    <label for=\"country\">Pays :</label>
+                    <input type=\"text\" id=\"country\" name=\"country\">
+                </li>
+                <li>
+                    <input type=\"submit\">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+{% endblock %}
+
+{# Uniquement si une liste de clients (variable customers) est disponible #}
+{# Si la liste de clients existe mais est vide : afficher un message standard (\"désolé, aucun client trouvé\") #}
+{# Sinon (s'il y a des clients) #}
+{# Poser les bases d'un tableau de clients #}
+{# Pour chaque client #}
+{# ajouter une ligne au tableau (nom de l'entreprise, nom & prenom du contact, ville, pays) #}", "customer.html.twig", "C:\\Wampserver64\\www\\23-php-poo-framework-symfony\\templates\\customer.html.twig");
+    }
+}

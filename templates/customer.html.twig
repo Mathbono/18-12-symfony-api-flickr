@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Recherche de clients en base de données</h2>
+    <form class="form" method="post" action="{{ path('handle_customer_form') }}">
+        <fieldset>
+            <legend>Recherche par...</legend>
+            <ul>
+                <li>
+                    <label for="firstname">Prénom :</label>
+                    <input type="text" id="firstname" name="firstname">
+                </li>
+                <li>
+                    <label for="lastname">Nom :</label>
+                    <input type="text" id="lastname" name="lastname">
+                </li>
+                <li>
+                    <label for="society">Société :</label>
+                    <input type="text" id="society" name="society">
+                </li>
+                <li>
+                    <label for="country">Pays :</label>
+                    <input type="text" id="country" name="country">
+                </li>
+                <li>
+                    <input type="submit">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    {% if customer is defined %}
+        {% if customer|length == 0 %}
+            {{ message }}
+        {% else %}
+            <table>
+                <thead>
+                <tr>
+                    <th>Nom de l'entreprise</th>
+                    <th>Prénom et nom du contact</th>
+                    <th>Ville</th>
+                    <th>Pays</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for custom in customer %}
+                    <tr>
+                        <td>{{ custom.customerName }}</td>
+                        <td>{{ custom.contactFirstName }} {{ custom.contactLastName|upper }}</td>
+                        <td>{{ custom.city }}</td>
+                        <td>{{ custom.country }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    {% endif %}
+{% endblock %}
